@@ -192,8 +192,8 @@ export const PVAChatbotDialog: React.FunctionComponent<IChatbotProps> = (props) 
 
     return (
         <>
-            {/* <DefaultButton secondaryText={props.buttonLabel} text={props.buttonLabel} onClick={toggleHideDialog}/> */}
-            <DefaultButton secondaryText="HR Robo" text="HR Robo" onClick={toggleHideDialog}/>            
+            <DefaultButton secondaryText={props.buttonLabel} text={props.buttonLabel} onClick={toggleHideDialog}/>
+            {/* <DefaultButton secondaryText="HR Robo" text="HR Robo" onClick={toggleHideDialog}/>             */}
             <Dialog styles={{
                 main: { selectors: { ['@media (min-width: 480px)']: { width: 450, minWidth: 450, maxWidth: '1000px' } } }
             }} hidden={hideDialog} onDismiss={toggleHideDialog} onLayerDidMount={handleLayerDidMount} dialogContentProps={dialogContentProps} modalProps={modalProps}>
@@ -213,7 +213,7 @@ export default class Chatbot extends React.Component<IChatbotProps> {
     }
     public render(): JSX.Element {
         return (
-            <div style={{ position: "absolute", right: 20, bottom: 20, zIndex: 999 }}>
+            <div style={{ position: "absolute", right: 30, bottom: 20, zIndex: 999 }}>
                 <PVAChatbotDialog
                 {...this.props}/>
             </div>
